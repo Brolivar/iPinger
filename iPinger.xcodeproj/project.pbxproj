@@ -99,12 +99,10 @@
 		BCB684E8256991A300575FE3 /* iPinger */ = {
 			isa = PBXGroup;
 			children = (
-				BCB684E9256991A300575FE3 /* AppDelegate.swift */,
-				BCB684EB256991A300575FE3 /* SceneDelegate.swift */,
-				BCB684ED256991A300575FE3 /* ViewController.swift */,
-				BCB684EF256991A300575FE3 /* Main.storyboard */,
+				BCB6851C2569922800575FE3 /* Support */,
+				BCB6851D2569925600575FE3 /* Presentation */,
+				BCB6851E2569925D00575FE3 /* Main */,
 				BCB684F2256991A600575FE3 /* Assets.xcassets */,
-				BCB684F4256991A600575FE3 /* LaunchScreen.storyboard */,
 				BCB684F7256991A600575FE3 /* Info.plist */,
 			);
 			path = iPinger;
@@ -126,6 +124,96 @@
 				BCB6850D256991A600575FE3 /* Info.plist */,
 			);
 			path = iPingerUITests;
+			sourceTree = "<group>";
+		};
+		BCB6851C2569922800575FE3 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BCB684E9256991A300575FE3 /* AppDelegate.swift */,
+				BCB684EB256991A300575FE3 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		BCB6851D2569925600575FE3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BCB68526256992D200575FE3 /* VC */,
+				BCB68523256992A300575FE3 /* Model Controllers */,
+				BCB68524256992B000575FE3 /* Cells */,
+				BCB685222569929A00575FE3 /* Protocols */,
+				BCB68525256992B700575FE3 /* Storyboards */,
+				BCB685212569929400575FE3 /* Navigation */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BCB6851E2569925D00575FE3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BCB685202569928700575FE3 /* Objects */,
+				BCB6851F2569927E00575FE3 /* Networking */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BCB6851F2569927E00575FE3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BCB685202569928700575FE3 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		BCB685212569929400575FE3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		BCB685222569929A00575FE3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BCB68523256992A300575FE3 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		BCB68524256992B000575FE3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BCB68525256992B700575FE3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BCB684EF256991A300575FE3 /* Main.storyboard */,
+				BCB684F4256991A600575FE3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BCB68526256992D200575FE3 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				BCB684ED256991A300575FE3 /* ViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
