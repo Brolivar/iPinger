@@ -15,6 +15,7 @@
 		BCB684F6256991A600575FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB684F4256991A600575FE3 /* LaunchScreen.storyboard */; };
 		BCB68501256991A600575FE3 /* iPingerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB68500256991A600575FE3 /* iPingerTests.swift */; };
 		BCB6850C256991A600575FE3 /* iPingerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6850B256991A600575FE3 /* iPingerUITests.swift */; };
+		EFBA155594725C0BCBE9322F /* Pods_iPinger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19552790A4B901AA60B877FD /* Pods_iPinger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F509BEF4008BE81D0BFA1C0 /* Pods-iPinger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPinger.release.xcconfig"; path = "Target Support Files/Pods-iPinger/Pods-iPinger.release.xcconfig"; sourceTree = "<group>"; };
+		19552790A4B901AA60B877FD /* Pods_iPinger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPinger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73B75356D550F79A537B1E4E /* Pods-iPinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPinger.debug.xcconfig"; path = "Target Support Files/Pods-iPinger/Pods-iPinger.debug.xcconfig"; sourceTree = "<group>"; };
 		BCB684E6256991A300575FE3 /* iPinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB684E9256991A300575FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCB684EB256991A300575FE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFBA155594725C0BCBE9322F /* Pods_iPinger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C4A5E15936EB089F8EBC144 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19552790A4B901AA60B877FD /* Pods_iPinger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BCB684DD256991A300575FE3 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,8 @@
 				BCB684FF256991A600575FE3 /* iPingerTests */,
 				BCB6850A256991A600575FE3 /* iPingerUITests */,
 				BCB684E7256991A300575FE3 /* Products */,
+				F49CEDB3AAE9A51C5E1AD45B /* Pods */,
+				0C4A5E15936EB089F8EBC144 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,6 +231,16 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		F49CEDB3AAE9A51C5E1AD45B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73B75356D550F79A537B1E4E /* Pods-iPinger.debug.xcconfig */,
+				0F509BEF4008BE81D0BFA1C0 /* Pods-iPinger.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,9 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCB68510256991A600575FE3 /* Build configuration list for PBXNativeTarget "iPinger" */;
 			buildPhases = (
+				749CCAE22CBDA1633123F25E /* [CP] Check Pods Manifest.lock */,
 				BCB684E2256991A300575FE3 /* Sources */,
 				BCB684E3256991A300575FE3 /* Frameworks */,
 				BCB684E4256991A300575FE3 /* Resources */,
+				7AC6B707F6EC210367E17689 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,6 +367,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		749CCAE22CBDA1633123F25E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iPinger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AC6B707F6EC210367E17689 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPinger/Pods-iPinger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPinger/Pods-iPinger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iPinger/Pods-iPinger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BCB684E2256991A300575FE3 /* Sources */ = {
@@ -521,6 +590,7 @@
 		};
 		BCB68511256991A600575FE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73B75356D550F79A537B1E4E /* Pods-iPinger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -540,6 +610,7 @@
 		};
 		BCB68512256991A600575FE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F509BEF4008BE81D0BFA1C0 /* Pods-iPinger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
