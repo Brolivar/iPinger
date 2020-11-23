@@ -3,18 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70C083048E41DD7143C664A1 /* Pods_iPinger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1552C6C35F288022E4C2175A /* Pods_iPinger.framework */; };
+		A9B8740C4672198975FBA9D1 /* Pods_iPingerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585116E527B2846BB452BA4 /* Pods_iPingerTests.framework */; };
 		BCB684EA256991A300575FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB684E9256991A300575FE3 /* AppDelegate.swift */; };
 		BCB684EC256991A300575FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB684EB256991A300575FE3 /* SceneDelegate.swift */; };
-		BCB684EE256991A300575FE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB684ED256991A300575FE3 /* ViewController.swift */; };
+		BCB684EE256991A300575FE3 /* PingerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB684ED256991A300575FE3 /* PingerViewController.swift */; };
 		BCB684F1256991A300575FE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB684EF256991A300575FE3 /* Main.storyboard */; };
 		BCB684F3256991A600575FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCB684F2256991A600575FE3 /* Assets.xcassets */; };
 		BCB684F6256991A600575FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB684F4256991A600575FE3 /* LaunchScreen.storyboard */; };
 		BCB68501256991A600575FE3 /* iPingerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB68500256991A600575FE3 /* iPingerTests.swift */; };
 		BCB6850C256991A600575FE3 /* iPingerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6850B256991A600575FE3 /* iPingerUITests.swift */; };
+		C07E42903558D553B9BE83FF /* Pods_iPinger_iPingerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F133E225D99C0660B938E98B /* Pods_iPinger_iPingerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +38,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1552C6C35F288022E4C2175A /* Pods_iPinger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPinger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45BBB5CA23D9056FED243926 /* Pods-iPingerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPingerTests.release.xcconfig"; path = "Target Support Files/Pods-iPingerTests/Pods-iPingerTests.release.xcconfig"; sourceTree = "<group>"; };
+		52E88859355675879676B13F /* Pods-iPinger-iPingerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPinger-iPingerUITests.release.xcconfig"; path = "Target Support Files/Pods-iPinger-iPingerUITests/Pods-iPinger-iPingerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6A4CF200270F3D6BF67A6A21 /* Pods-iPinger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPinger.release.xcconfig"; path = "Target Support Files/Pods-iPinger/Pods-iPinger.release.xcconfig"; sourceTree = "<group>"; };
+		732C6E39DDC94CD415CAD09E /* Pods-iPinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPinger.debug.xcconfig"; path = "Target Support Files/Pods-iPinger/Pods-iPinger.debug.xcconfig"; sourceTree = "<group>"; };
+		79425B6D96469B7BF83C080B /* Pods-iPinger-iPingerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPinger-iPingerUITests.debug.xcconfig"; path = "Target Support Files/Pods-iPinger-iPingerUITests/Pods-iPinger-iPingerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B00F03C5292C31484DE2FFAD /* Pods-iPingerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPingerTests.debug.xcconfig"; path = "Target Support Files/Pods-iPingerTests/Pods-iPingerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BCB684E6256991A300575FE3 /* iPinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB684E9256991A300575FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCB684EB256991A300575FE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCB684ED256991A300575FE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCB684ED256991A300575FE3 /* PingerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingerViewController.swift; sourceTree = "<group>"; };
 		BCB684F0256991A300575FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCB684F2256991A600575FE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCB684F5256991A600575FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,8 @@
 		BCB68507256991A600575FE3 /* iPingerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPingerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB6850B256991A600575FE3 /* iPingerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPingerUITests.swift; sourceTree = "<group>"; };
 		BCB6850D256991A600575FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C585116E527B2846BB452BA4 /* Pods_iPingerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPingerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F133E225D99C0660B938E98B /* Pods_iPinger_iPingerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPinger_iPingerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C083048E41DD7143C664A1 /* Pods_iPinger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B8740C4672198975FBA9D1 /* Pods_iPingerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07E42903558D553B9BE83FF /* Pods_iPinger_iPingerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A58A825C40234EFC0E0EBED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1552C6C35F288022E4C2175A /* Pods_iPinger.framework */,
+				F133E225D99C0660B938E98B /* Pods_iPinger_iPingerUITests.framework */,
+				C585116E527B2846BB452BA4 /* Pods_iPingerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DBB9BFCAAF66C5733FECED7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				732C6E39DDC94CD415CAD09E /* Pods-iPinger.debug.xcconfig */,
+				6A4CF200270F3D6BF67A6A21 /* Pods-iPinger.release.xcconfig */,
+				79425B6D96469B7BF83C080B /* Pods-iPinger-iPingerUITests.debug.xcconfig */,
+				52E88859355675879676B13F /* Pods-iPinger-iPingerUITests.release.xcconfig */,
+				B00F03C5292C31484DE2FFAD /* Pods-iPingerTests.debug.xcconfig */,
+				45BBB5CA23D9056FED243926 /* Pods-iPingerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BCB684DD256991A300575FE3 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +121,8 @@
 				BCB684FF256991A600575FE3 /* iPingerTests */,
 				BCB6850A256991A600575FE3 /* iPingerUITests */,
 				BCB684E7256991A300575FE3 /* Products */,
+				3DBB9BFCAAF66C5733FECED7 /* Pods */,
+				1A58A825C40234EFC0E0EBED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,7 +251,7 @@
 		BCB68526256992D200575FE3 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				BCB684ED256991A300575FE3 /* ViewController.swift */,
+				BCB684ED256991A300575FE3 /* PingerViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -223,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCB68510256991A600575FE3 /* Build configuration list for PBXNativeTarget "iPinger" */;
 			buildPhases = (
+				7BAAA1F5819F40022DD1D5BA /* [CP] Check Pods Manifest.lock */,
 				BCB684E2256991A300575FE3 /* Sources */,
 				BCB684E3256991A300575FE3 /* Frameworks */,
 				BCB684E4256991A300575FE3 /* Resources */,
+				90E80A7689B89B41404D1D15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,6 +282,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCB68513256991A600575FE3 /* Build configuration list for PBXNativeTarget "iPingerTests" */;
 			buildPhases = (
+				7A7CAFE8F257563A359CBC29 /* [CP] Check Pods Manifest.lock */,
 				BCB684F8256991A600575FE3 /* Sources */,
 				BCB684F9256991A600575FE3 /* Frameworks */,
 				BCB684FA256991A600575FE3 /* Resources */,
@@ -258,9 +301,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCB68516256991A600575FE3 /* Build configuration list for PBXNativeTarget "iPingerUITests" */;
 			buildPhases = (
+				52CC227D444F62BD8C445D6B /* [CP] Check Pods Manifest.lock */,
 				BCB68503256991A600575FE3 /* Sources */,
 				BCB68504256991A600575FE3 /* Frameworks */,
 				BCB68505256991A600575FE3 /* Resources */,
+				01C8BC68868185D67F6EF049 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,12 +386,115 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01C8BC68868185D67F6EF049 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPinger-iPingerUITests/Pods-iPinger-iPingerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPinger-iPingerUITests/Pods-iPinger-iPingerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iPinger-iPingerUITests/Pods-iPinger-iPingerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52CC227D444F62BD8C445D6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iPinger-iPingerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A7CAFE8F257563A359CBC29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iPingerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BAAA1F5819F40022DD1D5BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iPinger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90E80A7689B89B41404D1D15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPinger/Pods-iPinger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPinger/Pods-iPinger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iPinger/Pods-iPinger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCB684E2256991A300575FE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCB684EE256991A300575FE3 /* ViewController.swift in Sources */,
+				BCB684EE256991A300575FE3 /* PingerViewController.swift in Sources */,
 				BCB684EA256991A300575FE3 /* AppDelegate.swift in Sources */,
 				BCB684EC256991A300575FE3 /* SceneDelegate.swift in Sources */,
 			);
@@ -454,7 +602,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -509,7 +657,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -521,6 +669,7 @@
 		};
 		BCB68511256991A600575FE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 732C6E39DDC94CD415CAD09E /* Pods-iPinger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -540,6 +689,7 @@
 		};
 		BCB68512256991A600575FE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A4CF200270F3D6BF67A6A21 /* Pods-iPinger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -559,6 +709,7 @@
 		};
 		BCB68514256991A600575FE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B00F03C5292C31484DE2FFAD /* Pods-iPingerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -581,6 +732,7 @@
 		};
 		BCB68515256991A600575FE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45BBB5CA23D9056FED243926 /* Pods-iPingerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -603,6 +755,7 @@
 		};
 		BCB68517256991A600575FE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79425B6D96469B7BF83C080B /* Pods-iPinger-iPingerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -623,6 +776,7 @@
 		};
 		BCB68518256991A600575FE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52E88859355675879676B13F /* Pods-iPinger-iPingerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

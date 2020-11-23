@@ -1,0 +1,970 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0768FEAC866E87AE8EC777F0D6D7ECD6 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9986B9CAA17E551CD81292C616FEFF /* SimplePing.m */; };
+		23D24488F0F1C108BC4A868D893B690E /* Pods-iPinger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14A248A81D33024E833F6B01F53F1D88 /* Pods-iPinger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DB19A681E324342D87CCD8A3203A3AF /* PlainPing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96978845DB11745E4158166F50A36FD6 /* PlainPing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BD95231E3B2E20D8826FC7AC37BAA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		527411B02E2FC4123F8E80A38EFE75E0 /* Pods-iPinger-iPingerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 373372901089DF730A6A8F54428E4F5B /* Pods-iPinger-iPingerUITests-dummy.m */; };
+		A2C4BC8F6100ACBD077F468BBD635830 /* Pods-iPinger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A28E5921E3A52AC26303ACEA3FB2A6 /* Pods-iPinger-dummy.m */; };
+		AB7AB10EFB3A4C46D45289E1787480E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B0AE6E728871E6ED7A5672D14D9FD9B2 /* SimplePing.h in Headers */ = {isa = PBXBuildFile; fileRef = 507A07A0CA8508E2E1B8500F56968D1F /* SimplePing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFE611E959ED773605E4810CD82011A5 /* Pods-iPinger-iPingerUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5DDD40A345A99FE15A1E0241FF6BC69 /* Pods-iPinger-iPingerUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6CB5886E8606CED4C99CB6EDA9D7FD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		DB73235BF9F555E4120726E14860C790 /* Pods-iPingerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74150A0992D096D092480264BEFABDE8 /* Pods-iPingerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE4B7A383B14B9E1F94FC4B32FED7F79 /* PlainPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F8F9E7FC26C75BE63F4C5B8C3EEA48 /* PlainPing.swift */; };
+		E0DBF7DA3C1D9F8FFE18CBA137165337 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E3129712CE5D27DD3EDEE76DC5E9A33A /* Pods-iPingerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC2E088422BE5BA251CDC4377353AE /* Pods-iPingerTests-dummy.m */; };
+		F330AFAD86B299CD69AB1AD7C90E87EF /* PlainPing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEEA6C82712ED5BB2218B447A3C59F0 /* PlainPing-dummy.m */; };
+		F95835079F229816B6253F81DFC9B374 /* SimplePingAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A25663855D3284D48080FEEF5D07 /* SimplePingAdapter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84665FE90717344CF8BCF82AFAEFA61D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 847413C65F89B21676673345999BC8D3;
+			remoteInfo = "Pods-iPinger";
+		};
+		97A96042ABDFFC7FFB7BFCF05C3D22C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A909701FDE4A7A9692E3DCF5B2CBBC02;
+			remoteInfo = PlainPing;
+		};
+		EBD932F67788F27634D3E6395C04E3BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A909701FDE4A7A9692E3DCF5B2CBBC02;
+			remoteInfo = PlainPing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		003A249E4CF401F2442E294261F4CB38 /* PlainPing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PlainPing.modulemap; sourceTree = "<group>"; };
+		022E1D45CF43A09C0E4F22D69902F2B0 /* PlainPing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PlainPing.release.xcconfig; sourceTree = "<group>"; };
+		02C53AD071C7A34405F841AB829AFA15 /* Pods-iPinger-iPingerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPinger-iPingerUITests-frameworks.sh"; sourceTree = "<group>"; };
+		0C4C6B07201CA0681DB75CDA6804428B /* Pods-iPinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPinger.debug.xcconfig"; sourceTree = "<group>"; };
+		10551DA592F04E5391F63B34D9265973 /* Pods-iPinger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPinger.release.xcconfig"; sourceTree = "<group>"; };
+		13B8CA42BF93E4E64881804ADEC51F08 /* Pods-iPinger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPinger-Info.plist"; sourceTree = "<group>"; };
+		14A248A81D33024E833F6B01F53F1D88 /* Pods-iPinger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPinger-umbrella.h"; sourceTree = "<group>"; };
+		1BE5344B16381A0FD94C4D01CCA1AA2E /* Pods-iPinger-iPingerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPinger-iPingerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1DE049F8B4D74C702E065DCC27B36AB5 /* Pods-iPinger-iPingerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPinger-iPingerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		270465242E46A169B305497D681AF879 /* Pods-iPinger-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPinger-acknowledgements.markdown"; sourceTree = "<group>"; };
+		373372901089DF730A6A8F54428E4F5B /* Pods-iPinger-iPingerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPinger-iPingerUITests-dummy.m"; sourceTree = "<group>"; };
+		37A28E5921E3A52AC26303ACEA3FB2A6 /* Pods-iPinger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPinger-dummy.m"; sourceTree = "<group>"; };
+		38D51A6C8896212318EFD63FE2F8DE28 /* Pods-iPingerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPingerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3BF396985158632F0B3A103DA0D7F46B /* Pods_iPinger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iPinger.framework; path = "Pods-iPinger.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED574968BE27885595B8D81F11A725B /* PlainPing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PlainPing.framework; path = PlainPing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		507A07A0CA8508E2E1B8500F56968D1F /* SimplePing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePing.h; path = Pod/Classes/SimplePing.h; sourceTree = "<group>"; };
+		51F4DFC009874AFD61791974AC4B339F /* Pods-iPingerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPingerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		61F8F9E7FC26C75BE63F4C5B8C3EEA48 /* PlainPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlainPing.swift; path = Pod/Classes/PlainPing.swift; sourceTree = "<group>"; };
+		65E97F33C57087669DC6C0969B2C01D1 /* Pods-iPingerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPingerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6635BE08F91F66F1D74CF6EAB9D9EB94 /* Pods-iPinger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iPinger.modulemap"; sourceTree = "<group>"; };
+		6AE745FD6641DF69A11873C54EADE3E7 /* Pods_iPinger_iPingerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iPinger_iPingerUITests.framework; path = "Pods-iPinger-iPingerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		703649C88C464B9AE525DAE2A9985556 /* Pods-iPinger-iPingerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iPinger-iPingerUITests.modulemap"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		74150A0992D096D092480264BEFABDE8 /* Pods-iPingerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPingerTests-umbrella.h"; sourceTree = "<group>"; };
+		80525EE69ACEE316417AA76328DCCD20 /* Pods-iPingerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPingerTests.release.xcconfig"; sourceTree = "<group>"; };
+		83FB009C7CA148E818270A972A7DB709 /* Pods-iPinger-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPinger-frameworks.sh"; sourceTree = "<group>"; };
+		84CC2E088422BE5BA251CDC4377353AE /* Pods-iPingerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPingerTests-dummy.m"; sourceTree = "<group>"; };
+		86C255853D76AF2D177DEAAC5BA57E03 /* Pods_iPingerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iPingerTests.framework; path = "Pods-iPingerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96978845DB11745E4158166F50A36FD6 /* PlainPing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlainPing-umbrella.h"; sourceTree = "<group>"; };
+		9779E136DB5BDD9437EC2A62B3890DF2 /* PlainPing-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PlainPing-Info.plist"; sourceTree = "<group>"; };
+		9A9986B9CAA17E551CD81292C616FEFF /* SimplePing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SimplePing.m; path = Pod/Classes/SimplePing.m; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AAEEA6C82712ED5BB2218B447A3C59F0 /* PlainPing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PlainPing-dummy.m"; sourceTree = "<group>"; };
+		AF1AE946DCC3DA5BFCF19F464A50640B /* Pods-iPingerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPingerTests-Info.plist"; sourceTree = "<group>"; };
+		B227644C95BD0EBA8C1B0A2AB92880F2 /* PlainPing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlainPing-prefix.pch"; sourceTree = "<group>"; };
+		B42B8C255819F909AD2B0F9EFE9ADF4D /* Pods-iPinger-iPingerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPinger-iPingerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA9A083E18A0E77B980DB8B579E3796A /* Pods-iPinger-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPinger-acknowledgements.plist"; sourceTree = "<group>"; };
+		C5DDD40A345A99FE15A1E0241FF6BC69 /* Pods-iPinger-iPingerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPinger-iPingerUITests-umbrella.h"; sourceTree = "<group>"; };
+		C7BE92A20C4938EAA8D6CFFC730204C9 /* Pods-iPinger-iPingerUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPinger-iPingerUITests-Info.plist"; sourceTree = "<group>"; };
+		CFCE83942D0216E112E00ED2EC97FCC7 /* Pods-iPingerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iPingerTests.modulemap"; sourceTree = "<group>"; };
+		DB75AE918D65CE1385FC10D6ED5AA0B0 /* PlainPing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PlainPing.debug.xcconfig; sourceTree = "<group>"; };
+		F782A25663855D3284D48080FEEF5D07 /* SimplePingAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplePingAdapter.swift; path = Pod/Classes/SimplePingAdapter.swift; sourceTree = "<group>"; };
+		FA6578B534977581B5D6AB512749AEF0 /* Pods-iPinger-iPingerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPinger-iPingerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51A97052A1D7028FCFF22A055C1D3292 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31BD95231E3B2E20D8826FC7AC37BAA8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70603C203AB1F67FBAA7E39599EBFA8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0DBF7DA3C1D9F8FFE18CBA137165337 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D85CE8765BD9151C0ED2E32080A5E030 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB7AB10EFB3A4C46D45289E1787480E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E515F50D7D879665169AC3AF381EE6FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6CB5886E8606CED4C99CB6EDA9D7FD5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BD13AD4B3F4C95990AD7426EF9218A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C028E22B2858EA55A4B4ABD0AD81A23D /* PlainPing */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2E728EF1816ADC88EA4242D6027C0074 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D40A447FAA93E9CFBD6C3F270A3F9C7D /* Pods-iPinger */,
+				BA09D08079B5717FCDCF6D2F42A8572A /* Pods-iPinger-iPingerUITests */,
+				2F9978A01552A168C0B93183671C7D6D /* Pods-iPingerTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2F9978A01552A168C0B93183671C7D6D /* Pods-iPingerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFCE83942D0216E112E00ED2EC97FCC7 /* Pods-iPingerTests.modulemap */,
+				51F4DFC009874AFD61791974AC4B339F /* Pods-iPingerTests-acknowledgements.markdown */,
+				65E97F33C57087669DC6C0969B2C01D1 /* Pods-iPingerTests-acknowledgements.plist */,
+				84CC2E088422BE5BA251CDC4377353AE /* Pods-iPingerTests-dummy.m */,
+				AF1AE946DCC3DA5BFCF19F464A50640B /* Pods-iPingerTests-Info.plist */,
+				74150A0992D096D092480264BEFABDE8 /* Pods-iPingerTests-umbrella.h */,
+				38D51A6C8896212318EFD63FE2F8DE28 /* Pods-iPingerTests.debug.xcconfig */,
+				80525EE69ACEE316417AA76328DCCD20 /* Pods-iPingerTests.release.xcconfig */,
+			);
+			name = "Pods-iPingerTests";
+			path = "Target Support Files/Pods-iPingerTests";
+			sourceTree = "<group>";
+		};
+		3172200EC13F64FC9D3632093C27CA40 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				003A249E4CF401F2442E294261F4CB38 /* PlainPing.modulemap */,
+				AAEEA6C82712ED5BB2218B447A3C59F0 /* PlainPing-dummy.m */,
+				9779E136DB5BDD9437EC2A62B3890DF2 /* PlainPing-Info.plist */,
+				B227644C95BD0EBA8C1B0A2AB92880F2 /* PlainPing-prefix.pch */,
+				96978845DB11745E4158166F50A36FD6 /* PlainPing-umbrella.h */,
+				DB75AE918D65CE1385FC10D6ED5AA0B0 /* PlainPing.debug.xcconfig */,
+				022E1D45CF43A09C0E4F22D69902F2B0 /* PlainPing.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PlainPing";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BA09D08079B5717FCDCF6D2F42A8572A /* Pods-iPinger-iPingerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				703649C88C464B9AE525DAE2A9985556 /* Pods-iPinger-iPingerUITests.modulemap */,
+				1BE5344B16381A0FD94C4D01CCA1AA2E /* Pods-iPinger-iPingerUITests-acknowledgements.markdown */,
+				FA6578B534977581B5D6AB512749AEF0 /* Pods-iPinger-iPingerUITests-acknowledgements.plist */,
+				373372901089DF730A6A8F54428E4F5B /* Pods-iPinger-iPingerUITests-dummy.m */,
+				02C53AD071C7A34405F841AB829AFA15 /* Pods-iPinger-iPingerUITests-frameworks.sh */,
+				C7BE92A20C4938EAA8D6CFFC730204C9 /* Pods-iPinger-iPingerUITests-Info.plist */,
+				C5DDD40A345A99FE15A1E0241FF6BC69 /* Pods-iPinger-iPingerUITests-umbrella.h */,
+				B42B8C255819F909AD2B0F9EFE9ADF4D /* Pods-iPinger-iPingerUITests.debug.xcconfig */,
+				1DE049F8B4D74C702E065DCC27B36AB5 /* Pods-iPinger-iPingerUITests.release.xcconfig */,
+			);
+			name = "Pods-iPinger-iPingerUITests";
+			path = "Target Support Files/Pods-iPinger-iPingerUITests";
+			sourceTree = "<group>";
+		};
+		C028E22B2858EA55A4B4ABD0AD81A23D /* PlainPing */ = {
+			isa = PBXGroup;
+			children = (
+				61F8F9E7FC26C75BE63F4C5B8C3EEA48 /* PlainPing.swift */,
+				507A07A0CA8508E2E1B8500F56968D1F /* SimplePing.h */,
+				9A9986B9CAA17E551CD81292C616FEFF /* SimplePing.m */,
+				F782A25663855D3284D48080FEEF5D07 /* SimplePingAdapter.swift */,
+				3172200EC13F64FC9D3632093C27CA40 /* Support Files */,
+			);
+			name = PlainPing;
+			path = PlainPing;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				0BD13AD4B3F4C95990AD7426EF9218A7 /* Pods */,
+				EA5B33F7E4AF1C6DFC5EDBFA9C49F135 /* Products */,
+				2E728EF1816ADC88EA4242D6027C0074 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D40A447FAA93E9CFBD6C3F270A3F9C7D /* Pods-iPinger */ = {
+			isa = PBXGroup;
+			children = (
+				6635BE08F91F66F1D74CF6EAB9D9EB94 /* Pods-iPinger.modulemap */,
+				270465242E46A169B305497D681AF879 /* Pods-iPinger-acknowledgements.markdown */,
+				BA9A083E18A0E77B980DB8B579E3796A /* Pods-iPinger-acknowledgements.plist */,
+				37A28E5921E3A52AC26303ACEA3FB2A6 /* Pods-iPinger-dummy.m */,
+				83FB009C7CA148E818270A972A7DB709 /* Pods-iPinger-frameworks.sh */,
+				13B8CA42BF93E4E64881804ADEC51F08 /* Pods-iPinger-Info.plist */,
+				14A248A81D33024E833F6B01F53F1D88 /* Pods-iPinger-umbrella.h */,
+				0C4C6B07201CA0681DB75CDA6804428B /* Pods-iPinger.debug.xcconfig */,
+				10551DA592F04E5391F63B34D9265973 /* Pods-iPinger.release.xcconfig */,
+			);
+			name = "Pods-iPinger";
+			path = "Target Support Files/Pods-iPinger";
+			sourceTree = "<group>";
+		};
+		EA5B33F7E4AF1C6DFC5EDBFA9C49F135 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3ED574968BE27885595B8D81F11A725B /* PlainPing.framework */,
+				3BF396985158632F0B3A103DA0D7F46B /* Pods_iPinger.framework */,
+				6AE745FD6641DF69A11873C54EADE3E7 /* Pods_iPinger_iPingerUITests.framework */,
+				86C255853D76AF2D177DEAAC5BA57E03 /* Pods_iPingerTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5C089BEE52F36167B4547960F6D285DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB73235BF9F555E4120726E14860C790 /* Pods-iPingerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E2F7D278AA5545C2DF5D17EC2E936A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB19A681E324342D87CCD8A3203A3AF /* PlainPing-umbrella.h in Headers */,
+				B0AE6E728871E6ED7A5672D14D9FD9B2 /* SimplePing.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D828874E4DD2D3D05C22DCB0C61DAD26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D24488F0F1C108BC4A868D893B690E /* Pods-iPinger-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1C42F80B7988B608836AD5C11C00C6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFE611E959ED773605E4810CD82011A5 /* Pods-iPinger-iPingerUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		847413C65F89B21676673345999BC8D3 /* Pods-iPinger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B418F6C4925FDE023F76F8FCAB369598 /* Build configuration list for PBXNativeTarget "Pods-iPinger" */;
+			buildPhases = (
+				D828874E4DD2D3D05C22DCB0C61DAD26 /* Headers */,
+				49031E4EABCD869C02B1FD82CDD23C46 /* Sources */,
+				E515F50D7D879665169AC3AF381EE6FF /* Frameworks */,
+				D6FF51659FB0767C2F14744CAD0AD5E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D0AEE0C80B445084701D0ED2DC580F0 /* PBXTargetDependency */,
+			);
+			name = "Pods-iPinger";
+			productName = "Pods-iPinger";
+			productReference = 3BF396985158632F0B3A103DA0D7F46B /* Pods_iPinger.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A909701FDE4A7A9692E3DCF5B2CBBC02 /* PlainPing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9BED3F20A3406171ED84462A53D2B31 /* Build configuration list for PBXNativeTarget "PlainPing" */;
+			buildPhases = (
+				7E2F7D278AA5545C2DF5D17EC2E936A3 /* Headers */,
+				F5F52AEA980B9B0266028A54B48A8E68 /* Sources */,
+				70603C203AB1F67FBAA7E39599EBFA8A /* Frameworks */,
+				CDB992B9A91D4496813314D437D5DBCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlainPing;
+			productName = PlainPing;
+			productReference = 3ED574968BE27885595B8D81F11A725B /* PlainPing.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D54BC88D9B4FE918006DC2F11529F013 /* Pods-iPingerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F8B8A450BBBC6E1D38095222BFCACBE /* Build configuration list for PBXNativeTarget "Pods-iPingerTests" */;
+			buildPhases = (
+				5C089BEE52F36167B4547960F6D285DB /* Headers */,
+				32C0CB2AEEB8EBCFB1BD2EF15EEFFC7C /* Sources */,
+				D85CE8765BD9151C0ED2E32080A5E030 /* Frameworks */,
+				1BEB4CF2F6379CFEC474D6F398F791F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D3A9E8953909BBCB0987110F415DC71 /* PBXTargetDependency */,
+			);
+			name = "Pods-iPingerTests";
+			productName = "Pods-iPingerTests";
+			productReference = 86C255853D76AF2D177DEAAC5BA57E03 /* Pods_iPingerTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DC9DB4202641CE34F2ABA288BBFCEEF7 /* Pods-iPinger-iPingerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18C7B8472F3A0FDDF7635E7BB64C433E /* Build configuration list for PBXNativeTarget "Pods-iPinger-iPingerUITests" */;
+			buildPhases = (
+				EB1C42F80B7988B608836AD5C11C00C6 /* Headers */,
+				99EEEED7BCDAB7356368E7E4C8559B3F /* Sources */,
+				51A97052A1D7028FCFF22A055C1D3292 /* Frameworks */,
+				DE68E45A900A04A0BE5CE32D5D8ACB35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC08D4B05B8144D4B019DB8E1E75D486 /* PBXTargetDependency */,
+			);
+			name = "Pods-iPinger-iPingerUITests";
+			productName = "Pods-iPinger-iPingerUITests";
+			productReference = 6AE745FD6641DF69A11873C54EADE3E7 /* Pods_iPinger_iPingerUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = EA5B33F7E4AF1C6DFC5EDBFA9C49F135 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A909701FDE4A7A9692E3DCF5B2CBBC02 /* PlainPing */,
+				847413C65F89B21676673345999BC8D3 /* Pods-iPinger */,
+				DC9DB4202641CE34F2ABA288BBFCEEF7 /* Pods-iPinger-iPingerUITests */,
+				D54BC88D9B4FE918006DC2F11529F013 /* Pods-iPingerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BEB4CF2F6379CFEC474D6F398F791F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB992B9A91D4496813314D437D5DBCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6FF51659FB0767C2F14744CAD0AD5E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE68E45A900A04A0BE5CE32D5D8ACB35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32C0CB2AEEB8EBCFB1BD2EF15EEFFC7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3129712CE5D27DD3EDEE76DC5E9A33A /* Pods-iPingerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49031E4EABCD869C02B1FD82CDD23C46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2C4BC8F6100ACBD077F468BBD635830 /* Pods-iPinger-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99EEEED7BCDAB7356368E7E4C8559B3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				527411B02E2FC4123F8E80A38EFE75E0 /* Pods-iPinger-iPingerUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F52AEA980B9B0266028A54B48A8E68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F330AFAD86B299CD69AB1AD7C90E87EF /* PlainPing-dummy.m in Sources */,
+				DE4B7A383B14B9E1F94FC4B32FED7F79 /* PlainPing.swift in Sources */,
+				0768FEAC866E87AE8EC777F0D6D7ECD6 /* SimplePing.m in Sources */,
+				F95835079F229816B6253F81DFC9B374 /* SimplePingAdapter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D0AEE0C80B445084701D0ED2DC580F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PlainPing;
+			target = A909701FDE4A7A9692E3DCF5B2CBBC02 /* PlainPing */;
+			targetProxy = 97A96042ABDFFC7FFB7BFCF05C3D22C4 /* PBXContainerItemProxy */;
+		};
+		4D3A9E8953909BBCB0987110F415DC71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-iPinger";
+			target = 847413C65F89B21676673345999BC8D3 /* Pods-iPinger */;
+			targetProxy = 84665FE90717344CF8BCF82AFAEFA61D /* PBXContainerItemProxy */;
+		};
+		AC08D4B05B8144D4B019DB8E1E75D486 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PlainPing;
+			target = A909701FDE4A7A9692E3DCF5B2CBBC02 /* PlainPing */;
+			targetProxy = EBD932F67788F27634D3E6395C04E3BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		42119D7539665044D9B89120C3889CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DE049F8B4D74C702E065DCC27B36AB5 /* Pods-iPinger-iPingerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPinger-iPingerUITests/Pods-iPinger-iPingerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPinger-iPingerUITests/Pods-iPinger-iPingerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4EC070E0AD81FF0033345974795E3EFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80525EE69ACEE316417AA76328DCCD20 /* Pods-iPingerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPingerTests/Pods-iPingerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPingerTests/Pods-iPingerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5E4F2B1A6437D9B731B51C871FA97B67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38D51A6C8896212318EFD63FE2F8DE28 /* Pods-iPingerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPingerTests/Pods-iPingerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPingerTests/Pods-iPingerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6063AECB793BCA150C440F77FB78127B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB75AE918D65CE1385FC10D6ED5AA0B0 /* PlainPing.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PlainPing/PlainPing-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlainPing/PlainPing-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PlainPing/PlainPing.modulemap";
+				PRODUCT_MODULE_NAME = PlainPing;
+				PRODUCT_NAME = PlainPing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		91950F670600A62EBC1E0C3B368571BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B42B8C255819F909AD2B0F9EFE9ADF4D /* Pods-iPinger-iPingerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPinger-iPingerUITests/Pods-iPinger-iPingerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPinger-iPingerUITests/Pods-iPinger-iPingerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9810D3F37AD544D310F40E3D13A98EC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C4C6B07201CA0681DB75CDA6804428B /* Pods-iPinger.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPinger/Pods-iPinger-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPinger/Pods-iPinger.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9B4A76ECB4125D6C1CD350423F437C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10551DA592F04E5391F63B34D9265973 /* Pods-iPinger.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPinger/Pods-iPinger-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPinger/Pods-iPinger.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		DEE4214269A23FDE4E933A2FF94483F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 022E1D45CF43A09C0E4F22D69902F2B0 /* PlainPing.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PlainPing/PlainPing-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlainPing/PlainPing-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PlainPing/PlainPing.modulemap";
+				PRODUCT_MODULE_NAME = PlainPing;
+				PRODUCT_NAME = PlainPing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18C7B8472F3A0FDDF7635E7BB64C433E /* Build configuration list for PBXNativeTarget "Pods-iPinger-iPingerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91950F670600A62EBC1E0C3B368571BD /* Debug */,
+				42119D7539665044D9B89120C3889CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F8B8A450BBBC6E1D38095222BFCACBE /* Build configuration list for PBXNativeTarget "Pods-iPingerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E4F2B1A6437D9B731B51C871FA97B67 /* Debug */,
+				4EC070E0AD81FF0033345974795E3EFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B418F6C4925FDE023F76F8FCAB369598 /* Build configuration list for PBXNativeTarget "Pods-iPinger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9810D3F37AD544D310F40E3D13A98EC6 /* Debug */,
+				B9B4A76ECB4125D6C1CD350423F437C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9BED3F20A3406171ED84462A53D2B31 /* Build configuration list for PBXNativeTarget "PlainPing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6063AECB793BCA150C440F77FB78127B /* Debug */,
+				DEE4214269A23FDE4E933A2FF94483F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
