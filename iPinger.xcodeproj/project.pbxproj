@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		70C083048E41DD7143C664A1 /* Pods_iPinger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1552C6C35F288022E4C2175A /* Pods_iPinger.framework */; };
 		A9B8740C4672198975FBA9D1 /* Pods_iPingerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585116E527B2846BB452BA4 /* Pods_iPingerTests.framework */; };
+		BC2D7D8E25780A6400FA66AD /* ArrayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D7D8D25780A6400FA66AD /* ArrayViewModel.swift */; };
+		BC2D7D9325780ACD00FA66AD /* LocalAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D7D9225780ACD00FA66AD /* LocalAddress.swift */; };
 		BCB684EA256991A300575FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB684E9256991A300575FE3 /* AppDelegate.swift */; };
 		BCB684EC256991A300575FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB684EB256991A300575FE3 /* SceneDelegate.swift */; };
 		BCB684EE256991A300575FE3 /* PingerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB684ED256991A300575FE3 /* PingerViewController.swift */; };
@@ -17,6 +19,7 @@
 		BCB684F6256991A600575FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB684F4256991A600575FE3 /* LaunchScreen.storyboard */; };
 		BCB68501256991A600575FE3 /* iPingerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB68500256991A600575FE3 /* iPingerTests.swift */; };
 		BCB6850C256991A600575FE3 /* iPingerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6850B256991A600575FE3 /* iPingerUITests.swift */; };
+		BCCF4A82257814280013C190 /* PingerModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF4A81257814280013C190 /* PingerModelController.swift */; };
 		C07E42903558D553B9BE83FF /* Pods_iPinger_iPingerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F133E225D99C0660B938E98B /* Pods_iPinger_iPingerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,8 @@
 		732C6E39DDC94CD415CAD09E /* Pods-iPinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPinger.debug.xcconfig"; path = "Target Support Files/Pods-iPinger/Pods-iPinger.debug.xcconfig"; sourceTree = "<group>"; };
 		79425B6D96469B7BF83C080B /* Pods-iPinger-iPingerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPinger-iPingerUITests.debug.xcconfig"; path = "Target Support Files/Pods-iPinger-iPingerUITests/Pods-iPinger-iPingerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B00F03C5292C31484DE2FFAD /* Pods-iPingerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPingerTests.debug.xcconfig"; path = "Target Support Files/Pods-iPingerTests/Pods-iPingerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC2D7D8D25780A6400FA66AD /* ArrayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayViewModel.swift; sourceTree = "<group>"; };
+		BC2D7D9225780ACD00FA66AD /* LocalAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAddress.swift; sourceTree = "<group>"; };
 		BCB684E6256991A300575FE3 /* iPinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB684E9256991A300575FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCB684EB256991A300575FE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +64,7 @@
 		BCB68507256991A600575FE3 /* iPingerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPingerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB6850B256991A600575FE3 /* iPingerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPingerUITests.swift; sourceTree = "<group>"; };
 		BCB6850D256991A600575FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCCF4A81257814280013C190 /* PingerModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingerModelController.swift; sourceTree = "<group>"; };
 		C585116E527B2846BB452BA4 /* Pods_iPingerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPingerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F133E225D99C0660B938E98B /* Pods_iPinger_iPingerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPinger_iPingerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -179,9 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				BCB68526256992D200575FE3 /* VC */,
-				BCB68523256992A300575FE3 /* Model Controllers */,
 				BCB68524256992B000575FE3 /* Cells */,
 				BCB685222569929A00575FE3 /* Protocols */,
+				BCCF4A80257813FB0013C190 /* ModelControllers */,
 				BCB68525256992B700575FE3 /* Storyboards */,
 				BCB685212569929400575FE3 /* Navigation */,
 			);
@@ -207,6 +213,7 @@
 		BCB685202569928700575FE3 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				BC2D7D9225780ACD00FA66AD /* LocalAddress.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -221,15 +228,9 @@
 		BCB685222569929A00575FE3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				BC2D7D8D25780A6400FA66AD /* ArrayViewModel.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		BCB68523256992A300575FE3 /* Model Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 		BCB68524256992B000575FE3 /* Cells */ = {
@@ -254,6 +255,14 @@
 				BCB684ED256991A300575FE3 /* PingerViewController.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		BCCF4A80257813FB0013C190 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCCF4A81257814280013C190 /* PingerModelController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,7 +504,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCB684EE256991A300575FE3 /* PingerViewController.swift in Sources */,
+				BC2D7D9325780ACD00FA66AD /* LocalAddress.swift in Sources */,
+				BCCF4A82257814280013C190 /* PingerModelController.swift in Sources */,
 				BCB684EA256991A300575FE3 /* AppDelegate.swift in Sources */,
+				BC2D7D8E25780A6400FA66AD /* ArrayViewModel.swift in Sources */,
 				BCB684EC256991A300575FE3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
