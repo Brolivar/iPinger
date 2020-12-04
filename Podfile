@@ -5,7 +5,6 @@ target 'iPinger' do
   use_frameworks!
 
   # Pods for iPinger
-  pod "PlainPing"
 
   target 'iPingerTests' do
     inherit! :search_paths

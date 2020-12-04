@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import PlainPing
-
 
 enum AddressSorting {
     case address
@@ -66,22 +64,23 @@ extension PingerModelController: PingerModelControlerProtocol {
 
     // Ping a single ip address
     func pingAddress(localAddress: LocalAddress, completion: @escaping () -> ()) {
-        PlainPing.ping(localAddress.address, withTimeout: 1.0, completionBlock: { (timeElapsed:Double?, error:Error?) in
-            print("Pinged Address: ", localAddress.address)
-            if let latency = timeElapsed {
-                //print("Reachable")
-                localAddress.status = .reachable
-                completion()
-            } else {
-                //print("Not reachable")
-                localAddress.status = .unreachable
-                completion()
-            }
+//        PlainPing.ping(localAddress.address, withTimeout: 1.0, completionBlock: { (timeElapsed:Double?, error:Error?) in
+//            print("Pinged Address: ", localAddress.address)
+//            if let latency = timeElapsed {
+//                //print("Reachable")
+//                localAddress.status = .reachable
+//                completion()
+//            } else {
+//                //print("Not reachable")
+//                localAddress.status = .unreachable
+//                completion()
+//            }
+//
+//            if let error = error {
+//                print("error: \(error.localizedDescription)")
+//            }
+//        })
 
-            if let error = error {
-                print("error: \(error.localizedDescription)")
-            }
-        })
     }
 
     // Ping all 255 addreses contained on the modelController
@@ -92,7 +91,7 @@ extension PingerModelController: PingerModelControlerProtocol {
 
         // Test
 //        print("-- TEST ---")
-//        self.pingAddress(localAddress: self.viewModel[0]) {}
+        self.pingAddress(localAddress: self.viewModel[0]) {}
 //        print("-- ----- ---")
 
 //
@@ -117,10 +116,10 @@ extension PingerModelController: PingerModelControlerProtocol {
 
                 //print("Terminando tarea...", localAddress.address)
 
-            }
-        }
+     //       }
+      //  }
 
-    }
+}
     
 
 }
