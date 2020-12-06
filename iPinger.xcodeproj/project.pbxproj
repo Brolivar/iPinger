@@ -14,6 +14,7 @@
 		BC28F7B5257D52C5009EBF31 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28F7B4257D52C5009EBF31 /* Identifiers.swift */; };
 		BC2D7D8E25780A6400FA66AD /* ArrayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D7D8D25780A6400FA66AD /* ArrayViewModel.swift */; };
 		BC2D7D9325780ACD00FA66AD /* LocalAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D7D9225780ACD00FA66AD /* LocalAddress.swift */; };
+		BC8432A3257D9A7D009BF019 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8432A2257D9A7D009BF019 /* AppColors.swift */; };
 		BCB684EA256991A300575FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB684E9256991A300575FE3 /* AppDelegate.swift */; };
 		BCB684EC256991A300575FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB684EB256991A300575FE3 /* SceneDelegate.swift */; };
 		BCB684EE256991A300575FE3 /* PingerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB684ED256991A300575FE3 /* PingerViewController.swift */; };
@@ -56,6 +57,7 @@
 		BC28F7B4257D52C5009EBF31 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		BC2D7D8D25780A6400FA66AD /* ArrayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayViewModel.swift; sourceTree = "<group>"; };
 		BC2D7D9225780ACD00FA66AD /* LocalAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAddress.swift; sourceTree = "<group>"; };
+		BC8432A2257D9A7D009BF019 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		BCB684E6256991A300575FE3 /* iPinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB684E9256991A300575FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCB684EB256991A300575FE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				BCCF4A9A2579C11C0013C190 /* Libraries */,
 				BCB684E9256991A300575FE3 /* AppDelegate.swift */,
 				BCB684EB256991A300575FE3 /* SceneDelegate.swift */,
+				BC8432A2257D9A7D009BF019 /* AppColors.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				BCB684EE256991A300575FE3 /* PingerViewController.swift in Sources */,
 				BC2D7D9325780ACD00FA66AD /* LocalAddress.swift in Sources */,
 				BCCF4A82257814280013C190 /* PingerModelController.swift in Sources */,
+				BC8432A3257D9A7D009BF019 /* AppColors.swift in Sources */,
 				BC28F7A0257D045D009EBF31 /* SwiftyPing.swift in Sources */,
 				BCB684EA256991A300575FE3 /* AppDelegate.swift in Sources */,
 				BC2D7D8E25780A6400FA66AD /* ArrayViewModel.swift in Sources */,

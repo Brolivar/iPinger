@@ -25,10 +25,10 @@ class AddressTableViewCell: UITableViewCell {
         self.ipAddress.text = address.address
         if address.status == .reachable {
             self.statusImage.image = UIImage(systemName: "wifi")
-            self.statusImage.tintColor = .green
+            self.statusImage.tintColor = UIColor.appColor(.greenColor)
         } else {
             self.statusImage.image = UIImage(systemName: "wifi.slash")
-            self.statusImage.tintColor = .red
+            self.statusImage.tintColor = UIColor.appColor(.redColor)
         }
     }
 }

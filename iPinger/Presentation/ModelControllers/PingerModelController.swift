@@ -21,7 +21,7 @@ enum ReachabilityStatus {
 
 protocol PingerModelControlerProtocol: class {
     func pingAddress(localAddress: LocalAddress, completion: @escaping () -> ())
-    func pingAllAddresses(completion: @escaping (Bool, Int) -> ())
+    func pingAllAddresses(completion: @escaping (Bool, Float) -> ())
     func addressAt(_ index: Int) -> LocalAddress
     func stopUpdatingResults()
     func count() -> Int
@@ -59,6 +59,9 @@ class PingerModelController: ArrayViewModel {
         for n in 1...PingerModelController.addressNumber {
             let newAddress = LocalAddress(address: PingerModelController.localAddress + String(n))
             self.viewModel.append(newAddress)
+        }
+        for n in 1...PingerModelController.addressNumber {
+            let newAddress = LocalAddress(address: PingerModelController.localAddress + String(n))
             self.tempViewModel.append(newAddress)
         }
     }
@@ -96,7 +99,7 @@ extension PingerModelController: PingerModelControlerProtocol {
 
     // Ping all 255 addreses contained on the modelController
     // Completion -> (status, CurrentProgress)
-    func pingAllAddresses(completion: @escaping (Bool, Int) -> ()) {
+    func pingAllAddresses(completion: @escaping (Bool, Float) -> ()) {
 
         var pingedAddress = 0
         self.updateCancelled = false
@@ -106,23 +109,19 @@ extension PingerModelController: PingerModelControlerProtocol {
             self.pingerQueue.addOperation {
                 self.pingAddress(localAddress: localAddress) {
                     pingedAddress += 1
-                    print("N ", pingedAddress)
-
                     // Fetch Cancelled
                     if self.updateCancelled {
                         completion(false, 0)
                     // Fetch Completed
                     } else if pingedAddress == PingerModelController.addressNumber {
                         self.viewModel = self.tempViewModel
-                        let progress = self.checkProgress(currentProgress: pingedAddress)
+                        let progress = self.checkProgress(currentProgress: Float(pingedAddress))
                         completion(true, progress)
                     // Keep fetching and complete
                     } else {
-                        let progress = self.checkProgress(currentProgress: pingedAddress)
-                        print("PROGRESS: ", progress)
+                        let progress = self.checkProgress(currentProgress: Float(pingedAddress))
                         completion(false, progress)
                     }
-
                 }
             }
         }
@@ -134,17 +133,9 @@ extension PingerModelController: PingerModelControlerProtocol {
         self.pingerQueue.cancelAllOperations()
     }
 
-    // Calculates the current Progress (over 100) of the total addresses
-    func checkProgress(currentProgress: Int) -> Int {
-
-        let progress = (currentProgress * 100) / 256
-        /*
-         256 - 100%
-         progress - x
-
-         */
+    // Calculates the current Progress (over 1.0) of the total addresses
+    func checkProgress(currentProgress: Float) -> Float {
+        let progress = ((currentProgress * 100) / 256) / 100
         return progress
-
-
     }
 }

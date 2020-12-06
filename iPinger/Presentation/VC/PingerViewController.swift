@@ -13,8 +13,6 @@ class PingerViewController: UIViewController {
 
     //Ideally this should be injected by a third party entity (i.e navigator, segue manager, etc...)
     var pingerProtocol: PingerModelControlerProtocol! = PingerModelController()
-
-
     @IBOutlet private var addressTableView: UITableView!
     @IBOutlet private var progressBar: UIProgressView!
     @IBOutlet private var sortButton: UIButton!
@@ -22,12 +20,9 @@ class PingerViewController: UIViewController {
 
     // MARK: - Initialization
     override func viewDidLoad() {
-
+        super.viewDidLoad()
         self.addressTableView.delegate = self
         self.addressTableView.dataSource = self
-
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
 
         // TODO: Check if we already have store results to fetch new or not
         self.fetchNewResults()
@@ -44,30 +39,26 @@ class PingerViewController: UIViewController {
 
         self.pingerProtocol.stopUpdatingResults()
         DispatchQueue.main.async {
-            self.progressBar.progressTintColor = .green
-            self.progressBar.progress = 0
+            self.progressBar.progressTintColor = UIColor.appColor(.greenColor)
+            self.progressBar.progress = 0.0
         }
     }
 
 
     private func fetchNewResults() {
-        self.progressBar.progress = 0
-        self.progressBar.progressTintColor = .green
-
+        self.progressBar.progress = 0.0
+        self.progressBar.progressTintColor = UIColor.appColor(.greenColor)
         self.updateLabel.text = "Updating..."
 
-
         self.pingerProtocol.pingAllAddresses { status, currentProgress in
-
             DispatchQueue.main.async {
-                //print("Progress is now: ", Float(currentProgress))
-                self.progressBar.setProgress(Float(currentProgress), animated: true)
+                self.progressBar.setProgress(currentProgress, animated: true)
             }
-
             if status {     // Finished Fetch
                 print("Pinging finished")
                 DispatchQueue.main.async {
-                    self.progressBar.progressTintColor = .blue
+                    self.progressBar.progressTintColor = UIColor.appColor(.blueColor)
+                    self.progressBar.setProgress(1.0, animated: true)       // This is done again to avoid rounding up 0.98 value
                     self.addressTableView.reloadData()
                     self.updateLabel.text = "Completed"
                 }
@@ -88,7 +79,6 @@ extension PingerViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIDs.AddressTableViewCell, for: indexPath) as? AddressTableViewCell
             else { return UITableViewCell() }
 
