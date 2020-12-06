@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		70C083048E41DD7143C664A1 /* Pods_iPinger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1552C6C35F288022E4C2175A /* Pods_iPinger.framework */; };
 		A9B8740C4672198975FBA9D1 /* Pods_iPingerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585116E527B2846BB452BA4 /* Pods_iPingerTests.framework */; };
+		BC28F7A0257D045D009EBF31 /* SwiftyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28F79F257D045D009EBF31 /* SwiftyPing.swift */; };
 		BC2D7D8E25780A6400FA66AD /* ArrayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D7D8D25780A6400FA66AD /* ArrayViewModel.swift */; };
 		BC2D7D9325780ACD00FA66AD /* LocalAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D7D9225780ACD00FA66AD /* LocalAddress.swift */; };
 		BCB684EA256991A300575FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB684E9256991A300575FE3 /* AppDelegate.swift */; };
@@ -20,7 +21,6 @@
 		BCB68501256991A600575FE3 /* iPingerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB68500256991A600575FE3 /* iPingerTests.swift */; };
 		BCB6850C256991A600575FE3 /* iPingerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6850B256991A600575FE3 /* iPingerUITests.swift */; };
 		BCCF4A82257814280013C190 /* PingerModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF4A81257814280013C190 /* PingerModelController.swift */; };
-		BCCF4A9C2579C1A70013C190 /* SwiftyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF4A9B2579C1A70013C190 /* SwiftyPing.swift */; };
 		C07E42903558D553B9BE83FF /* Pods_iPinger_iPingerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F133E225D99C0660B938E98B /* Pods_iPinger_iPingerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +49,7 @@
 		732C6E39DDC94CD415CAD09E /* Pods-iPinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPinger.debug.xcconfig"; path = "Target Support Files/Pods-iPinger/Pods-iPinger.debug.xcconfig"; sourceTree = "<group>"; };
 		79425B6D96469B7BF83C080B /* Pods-iPinger-iPingerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPinger-iPingerUITests.debug.xcconfig"; path = "Target Support Files/Pods-iPinger-iPingerUITests/Pods-iPinger-iPingerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B00F03C5292C31484DE2FFAD /* Pods-iPingerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPingerTests.debug.xcconfig"; path = "Target Support Files/Pods-iPingerTests/Pods-iPingerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC28F79F257D045D009EBF31 /* SwiftyPing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyPing.swift; sourceTree = "<group>"; };
 		BC2D7D8D25780A6400FA66AD /* ArrayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayViewModel.swift; sourceTree = "<group>"; };
 		BC2D7D9225780ACD00FA66AD /* LocalAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAddress.swift; sourceTree = "<group>"; };
 		BCB684E6256991A300575FE3 /* iPinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +67,6 @@
 		BCB6850B256991A600575FE3 /* iPingerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPingerUITests.swift; sourceTree = "<group>"; };
 		BCB6850D256991A600575FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCCF4A81257814280013C190 /* PingerModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingerModelController.swift; sourceTree = "<group>"; };
-		BCCF4A9B2579C1A70013C190 /* SwiftyPing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyPing.swift; sourceTree = "<group>"; };
 		C585116E527B2846BB452BA4 /* Pods_iPingerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPingerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F133E225D99C0660B938E98B /* Pods_iPinger_iPingerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPinger_iPingerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -271,7 +271,7 @@
 		BCCF4A9A2579C11C0013C190 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				BCCF4A9B2579C1A70013C190 /* SwiftyPing.swift */,
+				BC28F79F257D045D009EBF31 /* SwiftyPing.swift */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -481,7 +481,7 @@
 				BCB684EE256991A300575FE3 /* PingerViewController.swift in Sources */,
 				BC2D7D9325780ACD00FA66AD /* LocalAddress.swift in Sources */,
 				BCCF4A82257814280013C190 /* PingerModelController.swift in Sources */,
-				BCCF4A9C2579C1A70013C190 /* SwiftyPing.swift in Sources */,
+				BC28F7A0257D045D009EBF31 /* SwiftyPing.swift in Sources */,
 				BCB684EA256991A300575FE3 /* AppDelegate.swift in Sources */,
 				BC2D7D8E25780A6400FA66AD /* ArrayViewModel.swift in Sources */,
 				BCB684EC256991A300575FE3 /* SceneDelegate.swift in Sources */,

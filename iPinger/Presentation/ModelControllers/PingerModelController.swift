@@ -30,10 +30,10 @@ class PingerModelController: ArrayViewModel {
     var viewModel: [LocalAddress] = [] //This should be private but Swift doesn't allow private vars in protocols - Privacy is accomplished by injecting an abstraction
 
     static let localAddress = "192.168.0."
-    static let addressNumber = 6
+    static let addressNumber = 254
 
     // MARK: - Pinger Properties
-    static let activePingers = 3       // Active concurrent pingers
+    static let activePingers = 10       // Active concurrent pingers
     static let pingAttemps = 3          // Max attemps to determine if host is reachable
 
     lazy var pingerQueue: OperationQueue = {
@@ -64,23 +64,25 @@ extension PingerModelController: PingerModelControlerProtocol {
 
     // Ping a single ip address
     func pingAddress(localAddress: LocalAddress, completion: @escaping () -> ()) {
-//        PlainPing.ping(localAddress.address, withTimeout: 1.0, completionBlock: { (timeElapsed:Double?, error:Error?) in
-//            print("Pinged Address: ", localAddress.address)
-//            if let latency = timeElapsed {
-//                //print("Reachable")
-//                localAddress.status = .reachable
-//                completion()
-//            } else {
-//                //print("Not reachable")
-//                localAddress.status = .unreachable
-//                completion()
-//            }
-//
-//            if let error = error {
-//                print("error: \(error.localizedDescription)")
-//            }
-//        })
 
+        // Ping once
+        // PingConfiguration ( time between consecutive pings, timeout interval)
+        let pinger = try? SwiftyPing(host: localAddress.address, configuration: PingConfiguration(interval: 0.5, with: 3), queue: DispatchQueue.global())
+        pinger?.observer = { (response) in
+
+            if response.ipHeader == nil {
+                localAddress.status = .unreachable
+                print("IpAddress:", localAddress.address, "-- status:", localAddress.status)
+                pinger?.haltPinging()
+            } else {
+                localAddress.status = .reachable
+                print("IpAddress:", localAddress.address, "-- status:", localAddress.status)
+                pinger?.haltPinging()
+            }
+
+        }
+        pinger?.targetCount = 1
+        try? pinger?.startPinging()
     }
 
     // Ping all 255 addreses contained on the modelController
@@ -90,9 +92,20 @@ extension PingerModelController: PingerModelControlerProtocol {
         print("Pinging all addresses with a total of ", PingerModelController.activePingers, " pingers and ", PingerModelController.pingAttemps, " attemps.")
 
         // Test
-//        print("-- TEST ---")
-        self.pingAddress(localAddress: self.viewModel[0]) {}
-//        print("-- ----- ---")
+        //self.pingAddress(localAddress: viewModel[1]) {}
+
+
+        for localAddress in self.viewModel {
+            print("On loop")
+            self.pingerQueue.addOperation {
+                self.pingAddress(localAddress: localAddress) {
+
+                }
+            }
+
+        }
+
+
 
 //
 //        for localAddress in self.viewModel {
@@ -118,6 +131,9 @@ extension PingerModelController: PingerModelControlerProtocol {
 
      //       }
       //  }
+
+
+        
 
 }
     
