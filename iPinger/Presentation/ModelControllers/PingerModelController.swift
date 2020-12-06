@@ -21,8 +21,9 @@ enum ReachabilityStatus {
 
 protocol PingerModelControlerProtocol: class {
     func pingAddress(localAddress: LocalAddress, completion: @escaping () -> ())
-    func pingAllAddresses(completion: @escaping () -> ())
+    func pingAllAddresses(completion: @escaping (Bool, Int) -> ())
     func addressAt(_ index: Int) -> LocalAddress
+    func stopUpdatingResults()
     func count() -> Int
 }
 
@@ -31,9 +32,13 @@ class PingerModelController: ArrayViewModel {
     // MARK: - Properties
     typealias ViewModel = LocalAddress
     var viewModel: [LocalAddress] = [] //This should be private but Swift doesn't allow private vars in protocols - Privacy is accomplished by injecting an abstraction
+    var tempViewModel: [LocalAddress] = []  //Aux copy to store all values during the address update.
 
     static let localAddress = "192.168.0."
     static let addressNumber = 254
+
+    // Progress
+    private var updateCancelled: Bool = false
 
     // MARK: - Pinger Properties
     // -----> Change HERE for custom setting:
@@ -53,7 +58,8 @@ class PingerModelController: ArrayViewModel {
         // (from 192.168.0.1 to 192.168.1.254 inclusively)
         for n in 1...PingerModelController.addressNumber {
             let newAddress = LocalAddress(address: PingerModelController.localAddress + String(n))
-            viewModel.append(newAddress)
+            self.viewModel.append(newAddress)
+            self.tempViewModel.append(newAddress)
         }
     }
 }
@@ -89,26 +95,56 @@ extension PingerModelController: PingerModelControlerProtocol {
     }
 
     // Ping all 255 addreses contained on the modelController
-    func pingAllAddresses(completion: @escaping () -> ()) {
+    // Completion -> (status, CurrentProgress)
+    func pingAllAddresses(completion: @escaping (Bool, Int) -> ()) {
 
         var pingedAddress = 0
+        self.updateCancelled = false
         print("Pinging all addresses with a total of ", PingerModelController.activePingers, " pingers and ", PingerModelController.pingAttemps, " attemps.")
 
-        // Test
-        //self.pingAddress(localAddress: viewModel[1]) {}
-
-        for localAddress in self.viewModel {
+        for localAddress in self.tempViewModel {
             self.pingerQueue.addOperation {
                 self.pingAddress(localAddress: localAddress) {
                     pingedAddress += 1
-                    if pingedAddress == 254 {
-                        print("Pinging FINISHED")
-                        completion()
+                    print("N ", pingedAddress)
+
+                    // Fetch Cancelled
+                    if self.updateCancelled {
+                        completion(false, 0)
+                    // Fetch Completed
+                    } else if pingedAddress == PingerModelController.addressNumber {
+                        self.viewModel = self.tempViewModel
+                        let progress = self.checkProgress(currentProgress: pingedAddress)
+                        completion(true, progress)
+                    // Keep fetching and complete
+                    } else {
+                        let progress = self.checkProgress(currentProgress: pingedAddress)
+                        print("PROGRESS: ", progress)
+                        completion(false, progress)
                     }
+
                 }
             }
         }
 }
     
+    // Cancels all remaining (and executing) operations on queue
+    func stopUpdatingResults() {
+        self.updateCancelled = true
+        self.pingerQueue.cancelAllOperations()
+    }
 
+    // Calculates the current Progress (over 100) of the total addresses
+    func checkProgress(currentProgress: Int) -> Int {
+
+        let progress = (currentProgress * 100) / 256
+        /*
+         256 - 100%
+         progress - x
+
+         */
+        return progress
+
+
+    }
 }

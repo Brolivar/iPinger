@@ -64,7 +64,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yu7-us-WTn" userLabel="Address Table View">
-                                <rect key="frame" x="0.0" y="104" width="414" height="631.5"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="626.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressCell" rowHeight="50" id="7vP-Qn-lQf" userLabel="Address Table View Cell" customClass="AddressTableViewCell" customModule="iPinger" customModuleProvider="target">
@@ -75,7 +75,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IP Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRm-vj-tee" userLabel="ipAddress">
-                                                    <rect key="frame" x="70" y="15" width="274" height="20.5"/>
+                                                    <rect key="frame" x="35" y="15" width="299" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -90,9 +90,9 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="yRm-vj-tee" firstAttribute="centerX" secondItem="TAd-tf-f9f" secondAttribute="centerX" id="3uE-fL-7oD"/>
-                                                <constraint firstItem="65D-j6-VpQ" firstAttribute="leading" secondItem="yRm-vj-tee" secondAttribute="trailing" constant="10" id="HZI-32-x0F"/>
-                                                <constraint firstItem="yRm-vj-tee" firstAttribute="centerY" secondItem="TAd-tf-f9f" secondAttribute="centerY" id="JYJ-Iz-X6E"/>
+                                                <constraint firstItem="yRm-vj-tee" firstAttribute="leading" secondItem="TAd-tf-f9f" secondAttribute="leadingMargin" constant="15" id="5gM-kF-Nap"/>
+                                                <constraint firstItem="yRm-vj-tee" firstAttribute="centerY" secondItem="TAd-tf-f9f" secondAttribute="centerY" id="72D-sr-a0B"/>
+                                                <constraint firstItem="65D-j6-VpQ" firstAttribute="leading" secondItem="yRm-vj-tee" secondAttribute="trailing" constant="20" id="FQb-PA-ZSX"/>
                                                 <constraint firstItem="65D-j6-VpQ" firstAttribute="centerY" secondItem="TAd-tf-f9f" secondAttribute="centerY" id="P7S-FN-kXU"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="65D-j6-VpQ" secondAttribute="trailing" constant="10" id="VRT-OQ-APB"/>
                                             </constraints>
@@ -105,7 +105,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYt-jw-vX3" userLabel="Bottom View">
-                                <rect key="frame" x="0.0" y="735.5" width="414" height="160.5"/>
+                                <rect key="frame" x="0.0" y="730.5" width="414" height="165.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update results:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-hc-RtR">
                                         <rect key="frame" x="15" y="10" width="384" height="20.5"/>
@@ -123,7 +123,7 @@
                                         <color key="trackTintColor" red="0.92429189095670106" green="0.92631505702661809" blue="0.98678388499250314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="kua-df-DqQ" userLabel="Button Stack View">
-                                        <rect key="frame" x="15" y="60.5" width="384" height="50"/>
+                                        <rect key="frame" x="15" y="65.5" width="384" height="50"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQh-uM-nKi" userLabel="Start Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="179.5" height="50"/>
@@ -169,7 +169,7 @@
                                     <constraint firstItem="BED-eD-Rp1" firstAttribute="top" secondItem="CHY-hc-RtR" secondAttribute="bottom" constant="15" id="de3-BN-k4h"/>
                                     <constraint firstItem="kua-df-DqQ" firstAttribute="leading" secondItem="uYt-jw-vX3" secondAttribute="leading" constant="15" id="lUh-T7-Ncg"/>
                                     <constraint firstAttribute="trailing" secondItem="kua-df-DqQ" secondAttribute="trailing" constant="15" id="mOC-hZ-st4"/>
-                                    <constraint firstItem="kua-df-DqQ" firstAttribute="top" secondItem="BED-eD-Rp1" secondAttribute="bottom" constant="10" id="mqA-Sh-vbu"/>
+                                    <constraint firstItem="kua-df-DqQ" firstAttribute="top" secondItem="BED-eD-Rp1" secondAttribute="bottom" constant="15" id="mqA-Sh-vbu"/>
                                     <constraint firstItem="CHY-hc-RtR" firstAttribute="leading" secondItem="uYt-jw-vX3" secondAttribute="leading" constant="15" id="t87-gO-rlw"/>
                                     <constraint firstAttribute="trailing" secondItem="CHY-hc-RtR" secondAttribute="trailing" constant="15" id="ugN-m3-O4o"/>
                                 </constraints>
@@ -194,6 +194,7 @@
                         <outlet property="addressTableView" destination="Yu7-us-WTn" id="dTg-QA-G9U"/>
                         <outlet property="progressBar" destination="BED-eD-Rp1" id="gEJ-zV-wAW"/>
                         <outlet property="sortButton" destination="Jon-xz-OcQ" id="xHB-RR-Gkv"/>
+                        <outlet property="updateLabel" destination="CHY-hc-RtR" id="KW0-4E-dMp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
