@@ -15,7 +15,6 @@ class PingerViewController: UIViewController {
     var pingerProtocol: PingerModelControlerProtocol! = PingerModelController()
     @IBOutlet private var addressTableView: UITableView!
     @IBOutlet private var progressBar: UIProgressView!
-    @IBOutlet private var sortButton: UIButton!
     @IBOutlet private var updateLabel: UILabel!
     static let cellHeight = 45
 
@@ -45,7 +44,29 @@ class PingerViewController: UIViewController {
         }
     }
 
+    @IBAction func sortButtonTapped(_ sender: Any) {
 
+        let alert = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
+
+        alert.addAction(UIAlertAction(title: "Sort by address", style: .default , handler:{ (UIAlertAction)in
+            self.sortBy(sortingType: .address)
+        }))
+        alert.addAction(UIAlertAction(title: "Sort by reachability", style: .default , handler:{ (UIAlertAction)in
+            self.sortBy(sortingType: .reachability)
+        }))
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true)
+    }
+
+    func sortBy(sortingType: SortingType) {
+        self.pingerProtocol.sort(sortingType: sortingType)
+        DispatchQueue.main.async {
+            self.addressTableView.reloadData()
+        }
+    }
+
+    // MARK: - Class methods
     private func fetchNewResults() {
         self.progressBar.progress = 0.0
         self.progressBar.progressTintColor = UIColor.appColor(.greenColor)
@@ -91,7 +112,5 @@ extension PingerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(PingerViewController.cellHeight)
     }
-
-
 }
 

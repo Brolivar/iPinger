@@ -14,8 +14,8 @@ protocol LocalAddressProtocol {
 
 class LocalAddress {
 
-    var address: String
-    var status: ReachabilityStatus
+    var address: String         // Instead of complete address, another option would have been only last part of string(hostID)
+    var status: ReachabilityStatus      // Could also be just a bool value, but I prefered this for clarity
 
     init(address: String) {
         self.address = address

@@ -8,9 +8,9 @@
 import Foundation
 
 // Sorting
-enum AddressSorting {
+enum SortingType {
     case address
-    case reachable
+    case reachability
 }
 
 // Reachability Status
@@ -25,6 +25,7 @@ protocol PingerModelControlerProtocol: class {
     func addressAt(_ index: Int) -> LocalAddress
     func stopUpdatingResults()
     func count() -> Int
+    func sort(sortingType: SortingType)
 }
 
 class PingerModelController: ArrayViewModel {
@@ -40,7 +41,7 @@ class PingerModelController: ArrayViewModel {
 
     // MARK: - Pinger Properties
     static let activePingers = 3         // 1. Active concurrent pingers
-    static let pingAttemps = 3          // 2. Max attemps to determine if host is reachable
+    static let pingAttemps = 1          // 2. Max attemps to determine if host is reachable
 
     // PingerQueue object, where we will be adding our operations (single address pinging)
     // .maxConcurrentOperationCount is how we achieve parallelism, establishing the max number
@@ -171,5 +172,34 @@ extension PingerModelController: PingerModelControlerProtocol {
     func checkProgress(currentProgress: Float) -> Float {
         let progress = ((currentProgress * 100) / 256) / 100
         return progress
+    }
+
+    func sort(sortingType: SortingType) {
+
+        switch sortingType {
+        case .address:
+            //Sort by address status
+            self.viewModel.sort { (obj1, obj2) -> Bool in
+
+                if let lastdot = obj1.address.range(of: ".", options: .backwards), let lastdot2 = obj2.address.range(of: ".", options: .backwards) {
+
+                    var base1 = obj1.address[lastdot.lowerBound...]     // Take last part of the address (HostID)
+                    var base2 = obj2.address[lastdot2.lowerBound...]
+                    base1.removeFirst()     // Remove the dot
+                    base2.removeFirst()
+                    return Int(base1) ?? 0 < Int(base2) ?? 0
+                } else {        // Case any of addresses is nil (won't be executed)
+                    return false
+                }
+            }
+            break
+        case .reachability:
+            //Sort by reachable status
+            self.viewModel.sort { (object1, object2) -> Bool in
+                return object1.status == .reachable && object2.status == .unreachable
+            }
+            break
+
+        }
     }
 }

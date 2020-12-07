@@ -33,6 +33,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jon-xz-OcQ" userLabel="Sort Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="60"/>
                                                 <color key="backgroundColor" name="AppBarColor"/>
+                                                <connections>
+                                                    <action selector="sortButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ScD-sj-9pn"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider.horizontal.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EEn-mm-wAq" userLabel="Slider Image">
                                                 <rect key="frame" x="15" y="11.5" width="40" height="36.5"/>
@@ -196,7 +199,6 @@
                     <connections>
                         <outlet property="addressTableView" destination="Yu7-us-WTn" id="dTg-QA-G9U"/>
                         <outlet property="progressBar" destination="BED-eD-Rp1" id="gEJ-zV-wAW"/>
-                        <outlet property="sortButton" destination="Jon-xz-OcQ" id="xHB-RR-Gkv"/>
                         <outlet property="updateLabel" destination="CHY-hc-RtR" id="KW0-4E-dMp"/>
                     </connections>
                 </viewController>
