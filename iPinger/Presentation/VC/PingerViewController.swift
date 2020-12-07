@@ -17,6 +17,7 @@ class PingerViewController: UIViewController {
     @IBOutlet private var progressBar: UIProgressView!
     @IBOutlet private var sortButton: UIButton!
     @IBOutlet private var updateLabel: UILabel!
+    static let cellHeight = 45
 
     // MARK: - Initialization
     override func viewDidLoad() {
@@ -85,6 +86,10 @@ extension PingerViewController: UITableViewDataSource {
         let index = indexPath.row
         cell.configure(from: self.pingerProtocol.addressAt(index))
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(PingerViewController.cellHeight)
     }
 
 

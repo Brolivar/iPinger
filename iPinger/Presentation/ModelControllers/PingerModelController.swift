@@ -32,23 +32,23 @@ class PingerModelController: ArrayViewModel {
     // MARK: - Properties
     typealias ViewModel = LocalAddress
     var viewModel: [LocalAddress] = [] //This should be private but Swift doesn't allow private vars in protocols - Privacy is accomplished by injecting an abstraction
-    var tempViewModel: [LocalAddress] = []  //Aux copy to store all values during the address update.
+    var tempViewModel: [LocalAddress] = []  //Aux copy to store all values during the address update (only gets copied if the task completes)
 
     static let localAddress = "192.168.0."
     static let addressNumber = 254
-
-    // Progress
     private var updateCancelled: Bool = false
 
     // MARK: - Pinger Properties
-    // -----> Change HERE for custom setting:
-    static let activePingers = 10       // 1. Active concurrent pingers
+    static let activePingers = 3         // 1. Active concurrent pingers
     static let pingAttemps = 3          // 2. Max attemps to determine if host is reachable
 
+    // PingerQueue object, where we will be adding our operations (single address pinging)
+    // .maxConcurrentOperationCount is how we achieve parallelism, establishing the max number
+    // of queued operations at the same time.
     lazy var pingerQueue: OperationQueue = {
         var queue = OperationQueue()
         queue.name = "Address Pinger Queue"
-        queue.maxConcurrentOperationCount = PingerModelController.activePingers    // Max number of queued operations at the same time
+        queue.maxConcurrentOperationCount = PingerModelController.activePingers
         return queue
     }()
 
@@ -74,18 +74,36 @@ extension PingerModelController: PingerModelControlerProtocol {
         return self.itemAtIndex(index)
     }
 
-    // Ping a single ip address
+    /// Function for single address pinging:
+    ///
+    ///  1. Given an LocalAddress object, and using the SwiftyPing library, a ping is made to the address, using the parameter "targetCount".
+    ///  2. TargetCounts determine the times the address is pinged.
+    ///     2.1. If the address is reachable, the function escapes directly, and the pinger is halt (in order to not waste the remaining attempts)
+    ///     2.2  If the address is unreachable, the function keeps incrementing the attempts, and if not successful attepts were made, function is escaped.
+    ///
+    ///
+    /// - Parameters:
+    ///   - localAddress: Address Object, composed of address and status (reachable/not reachable)
+    ///   - completion: escapes function to notify that the address pinging is finished (by being unreachable and using all attemtps OR just being rechable)
     func pingAddress(localAddress: LocalAddress, completion: @escaping () -> ()) {
 
+        var attempts = 1
         // PingConfiguration ( time between consecutive pings, timeout interval)
         let pinger = try? SwiftyPing(host: localAddress.address, configuration: PingConfiguration(interval: 0.5, with: 3), queue: DispatchQueue.global())
         pinger?.observer = { (response) in
 
             if response.ipHeader == nil {
                 localAddress.status = .unreachable
-                //print("IpAddress:", localAddress.address, "-- status:", localAddress.status)
-                pinger?.haltPinging()
-                completion()
+                //print("IpAddress:", localAddress.address, "-- status:", localAddress.status, "attempt: ", attempts)
+
+                // Max attempt reached -> we scape function
+                if attempts == PingerModelController.pingAttemps {
+                    //print("Max attempt reached, escaping...")
+                    pinger?.haltPinging()
+                    completion()
+                }
+                attempts += 1
+
             } else {
                 localAddress.status = .reachable
                 //print("IpAddress:", localAddress.address, "-- status:", localAddress.status)
@@ -93,12 +111,25 @@ extension PingerModelController: PingerModelControlerProtocol {
                 completion()
             }
         }
-        pinger?.targetCount = 1
+        pinger?.targetCount = PingerModelController.pingAttemps
         try? pinger?.startPinging()
     }
 
-    // Ping all 255 addreses contained on the modelController
-    // Completion -> (status, CurrentProgress)
+
+
+    /// Cycles and pings  all the addresses in the view model:
+    ///
+    /// 1. For every Address in the ViewModel, and operation for pinging that address is added to the OperationQueue.
+    /// 2. Then, and using the maxConcurrentOperationCount parameter, the task will start to be made concurrently.
+    /// 3. After each pinging task finishes (by being reachable or using attempts):
+    ///     3.1 The local number of address pinged is increased.
+    ///     3.2 A check is made to finish in case the task has being cancelled.
+    ///     3.3 The progress (0.0-1.0) is calculated, and returns the  completion parameters.
+    ///
+    /// - Parameter completion: The closure is used to communicate the ViewControler a bool indicating if all addresses are pinged,
+    ///  and a float that is used to set the progressBar
+    ///
+    ///
     func pingAllAddresses(completion: @escaping (Bool, Float) -> ()) {
 
         var pingedAddress = 0
@@ -106,9 +137,12 @@ extension PingerModelController: PingerModelControlerProtocol {
         print("Pinging all addresses with a total of ", PingerModelController.activePingers, " pingers and ", PingerModelController.pingAttemps, " attemps.")
 
         for localAddress in self.tempViewModel {
+
             self.pingerQueue.addOperation {
                 self.pingAddress(localAddress: localAddress) {
+                    
                     pingedAddress += 1
+                    //print("Number of pinged addresses", pingedAddress)
                     // Fetch Cancelled
                     if self.updateCancelled {
                         completion(false, 0)
