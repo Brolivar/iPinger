@@ -20,6 +20,8 @@ enum ReachabilityStatus {
 }
 
 protocol PingerModelControlerProtocol: class {
+    func storeAddressResults()
+    func checkSavedResults(completion: @escaping (Bool) -> ())
     func pingAddress(localAddress: LocalAddress, completion: @escaping () -> ())
     func pingAllAddresses(completion: @escaping (Bool, Float) -> ())
     func addressAt(_ index: Int) -> LocalAddress
@@ -74,6 +76,47 @@ extension PingerModelController: PingerModelControlerProtocol {
     func addressAt(_ index: Int) -> LocalAddress {
         return self.itemAtIndex(index)
     }
+
+    // Check for saved results in userDefaults.
+    // Returns true
+    func checkSavedResults(completion: @escaping (Bool) -> ()) {
+        print("Check called....")
+        let defaults = UserDefaults.standard
+        if let decodedData  = defaults.data(forKey: "LocalAddressesArray") {
+            do {
+                if let decodedAddresses = try NSKeyedUnarchiver.unarchivedObject(ofClasses: [NSArray.self, LocalAddress.self],
+                                                                                 from: decodedData) as? [LocalAddress] {
+                    //print("Results found: ", decodedAddresses.count)
+                    self.viewModel = decodedAddresses
+                    completion(true)
+                } else {
+                    print("No saved results found.")
+                    completion(false)
+                }
+            } catch {
+                print(error)
+            }
+
+        } else {
+            completion(false)
+        }
+        
+}
+
+    // Store address data into User Defaults
+    func storeAddressResults() {
+        let defaults = UserDefaults.standard
+        let addressesArrayKey = "LocalAddressesArray"
+
+        do {
+            let encodedData: Data = try NSKeyedArchiver.archivedData(withRootObject: self.viewModel, requiringSecureCoding: false)
+            defaults.set(encodedData, forKey: addressesArrayKey)
+            print("New address results stored.")
+        }  catch let error as NSError {
+            print("Error: ", error)
+        }
+    }
+
 
     /// Function for single address pinging:
     ///

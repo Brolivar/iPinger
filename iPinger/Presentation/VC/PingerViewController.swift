@@ -24,8 +24,17 @@ class PingerViewController: UIViewController {
         self.addressTableView.delegate = self
         self.addressTableView.dataSource = self
 
-        // TODO: Check if we already have store results to fetch new or not
-        self.fetchNewResults()
+        // We have already saved results
+        self.pingerProtocol.checkSavedResults { (savedResults) in
+            if savedResults {
+                print("Using stored values...")
+                DispatchQueue.main.async {
+                    self.addressTableView.reloadData()
+                }
+            } else {
+                self.fetchNewResults()
+            }
+        }
     }
 
     // MARK: - Actions
@@ -34,9 +43,8 @@ class PingerViewController: UIViewController {
     }
 
     @IBAction func stopButton(_ sender: Any) {
-        print("Cancelling operations.")
-        self.updateLabel.text = "Cancelled"
 
+        self.updateLabel.text = "Cancelled"
         self.pingerProtocol.stopUpdatingResults()
         DispatchQueue.main.async {
             self.progressBar.progressTintColor = UIColor.appColor(.greenColor)
@@ -83,6 +91,8 @@ class PingerViewController: UIViewController {
                     self.progressBar.setProgress(1.0, animated: true)       // This is done again to avoid rounding up 0.98 value
                     self.addressTableView.reloadData()
                     self.updateLabel.text = "Completed"
+                    // Persistence
+                    self.pingerProtocol.storeAddressResults()
                 }
             }
         }

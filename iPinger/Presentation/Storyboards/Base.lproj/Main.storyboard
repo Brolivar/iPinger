@@ -120,7 +120,7 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="BED-eD-Rp1">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BED-eD-Rp1">
                                         <rect key="frame" x="15" y="45.5" width="384" height="5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="5" id="211-Pd-bcD"/>
