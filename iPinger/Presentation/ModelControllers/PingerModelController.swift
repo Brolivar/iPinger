@@ -42,8 +42,8 @@ class PingerModelController: ArrayViewModel {
     private var updateCancelled: Bool = false
 
     // MARK: - Pinger Properties
-    static let activePingers = 3         // 1. Active concurrent pingers
-    static let pingAttemps = 1          // 2. Max attemps to determine if host is reachable
+    static let activePingers = 10         // 1. Active concurrent pingers
+    static let pingAttemps = 2          // 2. Max attemps to determine if host is reachable
 
     // PingerQueue object, where we will be adding our operations (single address pinging)
     // .maxConcurrentOperationCount is how we achieve parallelism, establishing the max number
@@ -86,7 +86,6 @@ extension PingerModelController: PingerModelControlerProtocol {
             do {
                 if let decodedAddresses = try NSKeyedUnarchiver.unarchivedObject(ofClasses: [NSArray.self, LocalAddress.self],
                                                                                  from: decodedData) as? [LocalAddress] {
-                    //print("Results found: ", decodedAddresses.count)
                     self.viewModel = decodedAddresses
                     completion(true)
                 } else {
