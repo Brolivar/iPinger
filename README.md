@@ -7,7 +7,7 @@ This iOS app was made as part of an interview project. I applied a simple versio
 The main functionality consist on pinging all addresses given a local ip, and trace if the host is reachable or not.
 
 The main particularity is that it is done using the full capabilities of parallelism with Swift, using queues to manage the load, and control
-how many pingers we have active at the same time moment, as well as the attempts that are used to determine if an address is or not reachable.+
+how many pingers we have active at the same time moment, as well as the attempts that are used to determine if an address is or not reachable.
 
 Example of how it works:
 
