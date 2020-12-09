@@ -16,7 +16,7 @@ Example of how it works:
 
 ### Features
 
-:white_check_mark: Given an modifiable local ip address, all 254 addresses are pinged and displayed on a table, with it reachability status.
+:white_check_mark: Given a local ip address, all 254 addresses are pinged and displayed on a table, with its reachability status.
 
 :white_check_mark: Using operation queues, the pinging is made concurrently, by several "pingers" at a time. This is easily changed on the Model Controller. 
 
