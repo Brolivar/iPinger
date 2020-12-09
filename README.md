@@ -17,11 +17,17 @@ Example of how it works:
 ### Features
 
 :white_check_mark: Given an modifiable local ip address, all 254 addresses are pinged and displayed on a table, with it reachability status.
+
 :white_check_mark: Using operation queues, the pinging is made concurrently, by several "pingers" at a time. This is easily changed on the Model Controller. 
+
 :white_check_mark: Easily modifiable number of attempts to determine if an address is reachable. 
+
 :white_check_mark: Start/Cancel button to update the pinging results, as well as a progress bar.
+
 :white_check_mark: Address sorting by ip, or reachable.
+
 :white_check_mark: Persistence withing the app, only loading automatically results for the first time, and then using the most recent update values.
+
 
 ## :books: Libraries 
 
