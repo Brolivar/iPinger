@@ -11,8 +11,8 @@ how many pingers we have active at the same time moment, as well as the attempts
 
 Example of how it works:
 
-	1.	If max. concurrent pingers is set to 10, then at the beginning we start pinging IP addresses from x.x.x.1 to x.x.x.10 in parallel.
-	2.	When any of the pingers completes, it must start pinging the next IP address in a row which is x.x.x.11 (all 10 pingers are always busy doing their job).
+- If max. concurrent pingers is set to 10, then at the beginning we start pinging IP addresses from x.x.x.1 to x.x.x.10 in parallel.
+- When any of the pingers completes, it must start pinging the next IP address in a row which is x.x.x.11 (all 10 pingers are always busy doing their job).
 
 ### Features
 
